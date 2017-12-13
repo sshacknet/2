@@ -69,15 +69,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DocumentList.cpp" />
+    <ClCompile Include="Document.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CharString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVLTree.hpp" />
-    <ClInclude Include="DocumentList.h" />
+    <ClInclude Include="Document.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="CharString.h" />
+    <ClInclude Include="LinkList.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

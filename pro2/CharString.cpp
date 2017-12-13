@@ -3,7 +3,7 @@
 #include <string>
 using std::cout;
 using std::endl;
-String::String( CharType* str): tok_point(0)
+String::String( CharType* str=nullptr): tok_point(0)
 {
     int size = (str ? wcslen(str) + 1 : 1);
     data = new CharType[size];

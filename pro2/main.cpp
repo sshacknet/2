@@ -42,11 +42,7 @@ int main(int argc, char *argv[])
         cout << "error";
         throw Error("fail to load dictionary");
     }
-    cout << tree.search(String(L"天意")) << endl;
-    cout << tree.search(String(L"挖机")) << endl;
-    cout << tree.search(String(L"反季节")) << endl;
-    cout << tree.search(String(L"芙佳洞水库")) << endl;
-    cout << tree.search(String(L"方法")) << endl;
+    
     cout << tree.height();
     system("pause");
     return 0;

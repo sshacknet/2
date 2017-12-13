@@ -28,10 +28,10 @@ public:
     AVLTree(const AVLTree& from) { root = from.root; }
     std::shared_ptr<AVLTreeNode<KeyType>> insert(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyType key);
     void insert(KeyType key);//插入一关键字
-    bool search(KeyType key);//搜索一关键字
+    std::shared_ptr<AVLTreeNode<KeyType>> search(KeyType key);//搜索一关键字
     inline int height() { return (root) ? root->height : 0; }//二叉树高度
 private:
-    bool search(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyType& key);
+    std::shared_ptr<AVLTreeNode<KeyType>> search(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyType& key);
     inline int height(std::shared_ptr<AVLTreeNode<KeyType>> node) { return (node) ? node->height : 0; }
     
 
@@ -92,13 +92,13 @@ void AVLTree<KeyType>::insert(KeyType key)
 }
 
 template <class KeyType>
-bool AVLTree<KeyType>::search(KeyType key)
+std::shared_ptr<AVLTreeNode<KeyType>> AVLTree<KeyType>::search(KeyType key)
 {
     
     if (root)
     {
         if (root->key == key)
-            return true;
+            return root;
         else if (key < root->key)
             return search(root->lchild, key);
         else
@@ -106,16 +106,16 @@ bool AVLTree<KeyType>::search(KeyType key)
             return search(root->rchild, key);
         }
     }
-    return false;
+    return nullptr;
 }
 
 template <class KeyType>
-bool AVLTree<KeyType>::search(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyType& key)
+std::shared_ptr<AVLTreeNode<KeyType>> AVLTree<KeyType>::search(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyType& key)
 {
     if (tree)
     {
         if (tree->key == key)
-            return true;
+            return tree;
         else if (key < tree->key)
             return search(tree->lchild, key);
         else
@@ -123,7 +123,7 @@ bool AVLTree<KeyType>::search(std::shared_ptr<AVLTreeNode<KeyType>>& tree, KeyTy
             return search(tree->rchild, key);
         }
     }
-    return false;
+    return nullptr;
 }
 
 template <class KeyType>

@@ -29,17 +29,14 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DocumentList.cpp">
+    <ClCompile Include="CharString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CharString.cpp">
+    <ClCompile Include="Document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DocumentList.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Error.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,6 +44,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AVLTree.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkList.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Document.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
